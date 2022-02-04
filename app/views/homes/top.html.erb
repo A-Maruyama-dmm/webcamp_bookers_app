@@ -1,2 +1,9 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<h1>投稿一覧</h1>
+<% @bookes.each do |book| %>
+  <h2>タイトル<h2p>
+  <tr>
+    <td><%= link_to book.title, "/bookes/#{book.id}" %></td>
+    <td><%= link_to book.body, "/bookes/#{book.id}" %></td>
+  </tr>
+
+<% end %>
