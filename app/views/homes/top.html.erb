@@ -1,9 +1,9 @@
-<h1>投稿一覧</h1>
-<% @bookes.each do |book| %>
-  <h2>タイトル<h2p>
-  <tr>
-    <td><%= link_to book.title, "/bookes/#{book.id}" %></td>
-    <td><%= link_to book.body, "/bookes/#{book.id}" %></td>
-  </tr>
+<h1>ようこそ Bookersへ！</h1>
+  <h2>Bookersでは、さまざまな書籍に関するあなたの意見や</br>
+  印象を共有し交換することができます</h2>
+
+  <p><%= link_to 'start', '/bookes/index' %></p>
+
+
 
 <% end %>
