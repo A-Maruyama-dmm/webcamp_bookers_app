@@ -9,28 +9,28 @@ class BookesController < ApplicationController
   end
 
   def new
-    @bookes = Book.new
+    @book = Book.new
   end
 
   def edit
-  @book = Book.find(params[:id])
+   @book = Book.find(params[:id])
   end
 
   def update
-    @book = Book.new(book_params)
-    if @book.save
+    @book = Book.find(params[:id])
+    if @book.update(bookes_params)
       redirect_to booke_path(@book)
       flash[:success] = "Book was successfully created."
     else
     @bookes = Book.all
-      render :index
+      render :edit
     end
   end
 
   def create
-   @book = Book.new(books_params)
+   @book = Book.new(bookes_params)
     if @book.save
-      redirect_to books_path(@book)
+      redirect_to bookes_path(@book)
       flash[:success] = "Book was successfully created."
     else
     @bookes = Book.all
