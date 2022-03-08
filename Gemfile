@@ -62,4 +62,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.5.0'
-gem 'jquery-rails'  
+gem 'jquery-rails'
+
+group :test do
+  gem 'capybara', '>= 2.15'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
